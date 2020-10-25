@@ -47,6 +47,7 @@ namespace LinkedListProgram
             while (beforeNode.data != before)
             {
                 beforeNode = beforeNode.next;
+                
             }
 
 
@@ -97,6 +98,22 @@ namespace LinkedListProgram
                 head = head.next;
                 Console.WriteLine("First node removed successfully");
             }
+        }
+        public int SearchNode(Object data)
+        {
+            int count = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                    count++;
+                temp = temp.next;
+            }
+            if (count == 0)
+                Console.WriteLine("Element not found");
+            else
+                Console.WriteLine($"Element {data} is present and its count = {count}");
+            return count;
         }
         public void Print()
         {
