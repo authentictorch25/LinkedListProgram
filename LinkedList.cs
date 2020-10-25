@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedListProgram
 {
-    class LinkedList
+    public class LinkedList
     {
         public Node head;
 
@@ -37,7 +37,7 @@ namespace LinkedListProgram
             }
            
         }
-        public void InsertInBetween(Object item, Object before, Object after)
+        public Object InsertInBetween(object item, object before, object after)
         {
             Node beforeNode = head;
             Node afterNode = head;
@@ -59,11 +59,13 @@ namespace LinkedListProgram
             if (beforeNode.next != afterNode && afterNode.next != beforeNode)
             {
                 Console.WriteLine("The nodes are not consecutive");
+                return 0;
             }
             else
             {
                 beforeNode.next = newNode;
                 newNode.next = afterNode;
+                return item;
             }
         }
         public void RemoveLastNode()
