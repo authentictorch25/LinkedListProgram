@@ -6,14 +6,16 @@ namespace LinkedListProgram
     {
         static void Main(string[] args)
         {
-            //Adding the nodes
-            LinkedList list = new LinkedList();
-            list.InsertAtFront(90);
-            list.InsertAtLast(56);
-            list.InsertAtLast(70);
-            list.InsertAtLast(80);
-             list.InsertInBetween(30, 56, 70);
-            list.Print();
+            SortedLinkedList sortedLinkedList = new SortedLinkedList();
+            sortedLinkedList.AddElementsInSortedOrder(56);
+            sortedLinkedList.AddElementsInSortedOrder(30);
+            sortedLinkedList.AddElementsInSortedOrder(40);
+            sortedLinkedList.AddElementsInSortedOrder(70);
+            sortedLinkedList.AddElementsInSortedOrder(100);
+            sortedLinkedList.AddElementsInSortedOrder(50);
+            sortedLinkedList.AddElementsInSortedOrder(10);
+            sortedLinkedList.Display();
+            Console.ReadKey();
 
         }
     }
