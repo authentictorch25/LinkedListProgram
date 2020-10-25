@@ -88,6 +88,16 @@ namespace LinkedListProgram
                 Console.WriteLine("Last node removed successfully");
             }
         }
+        public void RemoveFirstNode()
+        {
+            if (head == null)
+                Console.WriteLine("The linked list is empty");
+            else
+            {
+                head = head.next;
+                Console.WriteLine("First node removed successfully");
+            }
+        }
         public void Print()
         {
             Node temp = head;
