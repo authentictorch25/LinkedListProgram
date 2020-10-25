@@ -6,8 +6,11 @@ namespace LinkedListProgram
 {
     class Node
     {
-        Object data;
-        Node next;
+        /// <summary>
+        /// The parameters for node class
+        /// </summary>
+        public Object data;
+        public Node next;
         
         /// <summary>
         /// Constructor for the Node class

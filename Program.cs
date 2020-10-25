@@ -7,9 +7,12 @@ namespace LinkedListProgram
         static void Main(string[] args)
         {
             //Adding the nodes
-            Node newNode = new Node(56);
-            newNode.next = new Node(70);
-            newNode.next.next = new Node(30);
+            LinkedList list = new LinkedList();
+            list.InsertAtLast(56);
+            list.InsertAtLast(30);
+            list.InsertAtLast(70);
+            list.Print();
+
         }
     }
 }
