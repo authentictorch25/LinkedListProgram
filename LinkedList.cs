@@ -7,6 +7,7 @@ namespace LinkedListProgram
     class LinkedList
     {
         public Node head;
+
         
         public void InsertAtFront(Object item)
         {
@@ -35,6 +36,34 @@ namespace LinkedListProgram
                 endNode.next = newNode;
             }
            
+        }
+        public void InsertInBetween(Object item, Object before, Object after)
+        {
+            Node beforeNode = head;
+            Node afterNode = head;
+            Node newNode = new Node(item);
+            
+
+            while (beforeNode.data != before)
+            {
+                beforeNode = beforeNode.next;
+            }
+
+
+            while (afterNode.data != after)
+            {
+                afterNode = afterNode.next;
+            }
+
+            if (beforeNode.next != afterNode && afterNode.next != beforeNode)
+            {
+                Console.WriteLine("The nodes are not consecutive");
+            }
+            else
+            {
+                beforeNode.next = newNode;
+                newNode.next = afterNode;
+            }
         }
         public void Print()
         {
