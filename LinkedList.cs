@@ -65,6 +65,29 @@ namespace LinkedListProgram
                 newNode.next = afterNode;
             }
         }
+        public void RemoveLastNode()
+        {
+            // If the linked list is empty
+            if (head == null)
+                Console.WriteLine("The linked list is empty");
+            // If the linked list has only one node
+            else if (head.next == null)
+            {
+                head = null;
+                Console.WriteLine("Last node removed successfully");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                //Removong the node
+                temp.next = null;
+                Console.WriteLine("Last node removed successfully");
+            }
+        }
         public void Print()
         {
             Node temp = head;
